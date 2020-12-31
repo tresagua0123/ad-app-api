@@ -1,0 +1,24 @@
+current directory: /Users/muratakaishou/adApp/api/vender/bundle/ruby/2.5.0/gems/puma-4.3.7/ext/puma_http11
+/Users/muratakaishou/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20201231-40667-n8qllq.rb extconf.rb
+checking for BIO_read() in -lcrypto... yes
+checking for SSL_CTX_new() in -lssl... yes
+checking for openssl/bio.h... yes
+checking for DTLS_method() in openssl/ssl.h... yes
+checking for TLS_server_method() in openssl/ssl.h... yes
+checking for SSL_CTX_set_min_proto_version in openssl/ssl.h... yes
+creating Makefile
+
+current directory: /Users/muratakaishou/adApp/api/vender/bundle/ruby/2.5.0/gems/puma-4.3.7/ext/puma_http11
+make "DESTDIR=" clean
+
+current directory: /Users/muratakaishou/adApp/api/vender/bundle/ruby/2.5.0/gems/puma-4.3.7/ext/puma_http11
+make "DESTDIR="
+compiling http11_parser.c
+compiling io_buffer.c
+compiling mini_ssl.c
+compiling puma_http11.c
+linking shared-object puma/puma_http11.bundle
+
+current directory: /Users/muratakaishou/adApp/api/vender/bundle/ruby/2.5.0/gems/puma-4.3.7/ext/puma_http11
+make "DESTDIR=" install
+/usr/local/bin/ginstall -c -m 0755 puma_http11.bundle ./.gem.20201231-40667-tp1jox/puma
