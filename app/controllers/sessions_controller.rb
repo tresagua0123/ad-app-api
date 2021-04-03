@@ -1,4 +1,6 @@
 class SessionsController < FirebaseController
+
+    include ActionController::HttpAuthentication::Token::ControllerMethods
     # POST /login
     def create 
         super do |decoded_token|

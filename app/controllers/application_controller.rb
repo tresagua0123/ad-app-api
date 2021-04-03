@@ -1,6 +1,9 @@
 class ApplicationController < ActionController::API
     # protect_from_forgery with: :exception
 
+    include ActionController::HttpAuthentication::Token::ControllerMethods
+    include SessionsHelper
+
     private 
         #tokenが正規のものであれば、デコード結果を返す
         #そうでなければfalseを返す。
