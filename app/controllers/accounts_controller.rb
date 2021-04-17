@@ -1,6 +1,6 @@
 class AccountsController < FirebaseController
     # POST /accounts
-    def create 
+    def create
         super do |decoded_token|
             @user = User.create(
                 email: decoded_token['decoded_token'],
