@@ -11,12 +11,10 @@ class ApplicationController < ActionController::API
             #authenticate_with_http_tokenは、HTTPリクエストヘッダーに
             #Authorizationが含まれていればブロックを評価する。
             #含まれていなければnilを返す。
-            puts "authenticate_firebase_id_token"
             authenticate_with_http_token do |token, options|
-                puts "authenticate_with_http_token"
                 begin
                     decoded_token = FirebaseHelper::Auth.verify_id_token(token)
-                rescue => exception
+                rescue => e
                     logger.error(e.message)
                     false
                 end

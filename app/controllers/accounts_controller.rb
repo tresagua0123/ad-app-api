@@ -2,11 +2,12 @@ class AccountsController < FirebaseController
     # POST /accounts
     def create
         super do |decoded_token|
-            @user = User.create(
-                email: decoded_token['decoded_token'],
-                uid: decoded_token['uid']
+            puts decoded_token
+            User.create(
+                email: decoded_token['decoded_token'][:payload]['email'],
+                photo_url: decoded_token['decoded_token'][:payload]['picture'],
+                uid: decoded_token['uid'],
             )
-            render json: @user
         end
     end
 

@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   delete '/logout',   to: 'sessions#destroy'
   post   '/accounts', to: 'accounts#create'
   delete '/accounts', to: 'accounts#destroy'
+
+  resources :users, only: :index
 end

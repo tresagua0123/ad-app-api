@@ -7,11 +7,10 @@ class FirebaseController < ApplicationController
     end
 
     def create 
-        puts "firebase_controller_create"
         if decoded_token = authenticate_firebase_id_token 
             user = yield(decoded_token)
+            render json: user
             log_in(user)
-            redirect_back_or(user_path)
         else  
             redirect_to login_url
         end
